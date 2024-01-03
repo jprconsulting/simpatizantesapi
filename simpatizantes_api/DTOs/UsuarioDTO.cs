@@ -1,10 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace beneficiarios_dif_api.Entities
+namespace beneficiarios_dif_api.DTOs
 {
-    public class Usuario
+    public class UsuarioDTO
     {
-        public int Id { get; set; }
+        public int? Id { get; set; }
+        public string NombreCompleto { get; set; }
         public string Nombre { get; set; }
         public string ApellidoPaterno { get; set; }
         public string ApellidoMaterno { get; set; }
@@ -12,8 +13,6 @@ namespace beneficiarios_dif_api.Entities
         public string Password { get; set; }
         public bool Estatus { get; set; }
         [Required]
-        public Rol Rol { get; set; }
-        public int? AreaAdscripcionId { get; set; }
-        public AreaAdscripcion AreaAdscripcion { get; set; }
+        public RolDTO Rol { get; set; }
     }
 }
